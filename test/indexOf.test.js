@@ -26,4 +26,18 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns -1 if fromIndex is bigger than array length', () => {
+    const arr = [0, 1, 2, 3, 4];
+    expect(_.indexOf(arr, 2, 5)).toBe(-1);
+  });
+
+  it('returns index of first matching value', () => {
+    const arr = [0, 1, 2, 3, 4];
+    expect(_.indexOf(arr, 3, 0)).toBe(3);
+  });
+
+  it('returns -1 if array is empty', () => {
+    const arr = [];
+    expect(_.indexOf(arr, 'horse')).toBe(-1);
+  })
 });

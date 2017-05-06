@@ -32,10 +32,10 @@ describe('isArrayLike()', () => {
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
 
-  it('returns false for argument[0]', () => {
+  it('returns correct result of first object if passed in multiple arguments', () => {
     const arr1 = {happy: 'yes'};
     const arr2 = {length: 5};
     expect(_.isArrayLike(arr1, arr2)).toBe(false);
-    expect(_.isArrayLike(arr2)).toBe(true);
+    expect(_.isArrayLike(arr2, arr1)).toBe(true);
   });
 });

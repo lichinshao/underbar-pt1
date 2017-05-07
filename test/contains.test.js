@@ -45,6 +45,7 @@ describe('contains()', () => {
     const object = {'name': 'Rob', 'age': 43, 'occupation': 'teacher'};
     expect(_.contains(object, 'teacher')).toBe(true);
     expect(_.contains(object, 'daughter')).toBe(false);
+    expect(_.contains(object, 'name')).toBe(false);
   });
 
 });

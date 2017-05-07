@@ -23,4 +23,11 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters out positive numbers', () => {
+    const arr = [-10, 34, -24, 54, -1, 0];
+    const isPositive = (num) => num > 0;
+    const posValues = _.filter(arr, isPositive);
+    expect(posValues).toEqual([34, 54]);
+  });
 });

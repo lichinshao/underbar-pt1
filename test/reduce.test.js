@@ -31,4 +31,9 @@ describe('reduce()', () => {
     expect(result).toBe(25);
   });
 
+  it('reduces an array of numbers to a product, with acc = 3', () => {
+    const nums = [2, 3, 4];
+    const result = _.reduce(nums, (a, b) => a * b, 3);
+    expect(result).toBe(72);
+  })
 });
